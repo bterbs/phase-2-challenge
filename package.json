@@ -1,0 +1,19 @@
+{
+  "name": "phase-2-challenge",
+  "version": "1.0.0",
+  "description": "phase two interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bterbs/phase-2-challenge.git"
+  },
+  "author": "Brittany TerBush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bterbs/phase-2-challenge/issues"
+  },
+  "homepage": "https://github.com/bterbs/phase-2-challenge#readme"
+}
