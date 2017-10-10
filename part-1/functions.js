@@ -1,13 +1,14 @@
 // Show a weekday
 // Write a function weekday(date) to find the weekday for a given Date object,
 // returing either 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', or 'Sun'.
-const weekday = (year, month, day) => {
+const weekday = (date) => {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const d = new Date(year, month, day);
+  const d = new Date(date);
   return daysOfWeek[d.getDay()];
 };
 
-// weekday(2017, 9, 10);
+// var date = new Date(2017, 9, 10)
+// weekday(date);
 
 // Get a snippet from text
 // Write a function snippet(string, maxlength) that shortens the string given to the maxlength
