@@ -16,13 +16,11 @@ const weekday = (year, month, day) => {
 // string. If the string is shorter than the maxlength, just return the string unmodified.
 
 const snippet = (string, maxlength) => {
-  if (string.length < maxlength) { console.log(string); }
-    console.log(string.slice(0, maxlength) + '...');
-    return string.slice(0, maxlength) + '...';
-
+  if (string.length < maxlength) { string }
+  return `${string.slice(0, maxlength)}...`;
 };
 
-snippet("For the following exercises,", 10);
+// snippet("For the following exercises,", 10);
 
 // Number of properties
 // Write a function numProps(obj) that returns the number of properties an object has.
