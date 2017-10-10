@@ -16,8 +16,11 @@ const weekday = (date) => {
 // string. If the string is shorter than the maxlength, just return the string unmodified.
 
 const snippet = (string, maxlength) => {
-  if (string.length < maxlength) { string }
+  if (string.length < maxlength) {
+    return string;
+  } else {
   return `${string.slice(0, maxlength)}...`;
+  }
 };
 
 // Number of properties
