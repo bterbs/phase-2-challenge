@@ -4,7 +4,6 @@
 const weekday = (year, month, day) => {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const d = new Date(year, month, day);
-  // console.log(`The Day of the week you are looking for is ${daysOfWeek[d.getDay()]}`);
   return daysOfWeek[d.getDay()];
 };
 
@@ -20,36 +19,22 @@ const snippet = (string, maxlength) => {
   return `${string.slice(0, maxlength)}...`;
 };
 
-// snippet("For the following exercises,", 10);
-
 // Number of properties
 // Write a function numProps(obj) that returns the number of properties an object has.
 // Ignore symbolic properties and count only the "own properties" (not inherited) of the
 // object.
-const friend = {
-  name: 'Dominique',
-  age: 30,
-  phone: '555-555-5555',
-};
 const numProps = (obj) => {
-  // returns number of 'own properties' object has
-  // not question of object inheritence!
-  let objectKeys = Object.keys(obj);
+  const objectKeys = Object.keys(obj);
   console.log(objectKeys.length);
+  return objectKeys.length;
 };
-
-numProps({});
 
 // Filter between
 // Write a function filterBetween(array, min, max) that takes an array of numbers,
 // a min value, and a max value. It returns a new array containing only the elements that
 // are greater than or equal to min and less than or equal to max.
 const filterBetween = (arr, min, max) => {
-  let result = arr.filter((num) => num >= min && num <= max);
+  const result = arr.filter((num) => num >= min && num <= max);
   console.log(result);
   return result;
 };
-
-let arr = [5, 10, 15, 20, 25, 30, 35]
-
-filterBetween(arr, 22, 100);
