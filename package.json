@@ -4,7 +4,7 @@
   "description": "phase two interview",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha part-1/test.js"
   },
   "repository": {
     "type": "git",
