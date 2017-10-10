@@ -15,13 +15,13 @@ describe('weekday()', () => {
   });
 });
 
-describe('weekday()', () => {
-  it('returns expected day with valid input', () => {
-    const date = new Date(2017, 9, 10);
-    expect(weekday(date)).to.equal('Tue');
+describe('snippet()', () => {
+  it('returns expected snippet with valid input', () => {
+    expect(snippet('Hello, world!', 20)).to.equal('Hello, world!');
   });
-  it('returns undefined with invalid/unexpected input', () => {
-    const date = 'today';
-    expect(weekday(date)).to.equal(undefined);
-  });
+  it('throws an error with invalid/unexpected input', () => {
+    expect(function(){
+      snippet(3, 0);
+    }).to.throw('string.slice is not a function');
+  }); 
 });
