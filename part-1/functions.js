@@ -26,13 +26,24 @@ const snippet = (string, maxlength) => {
 // Write a function numProps(obj) that returns the number of properties an object has.
 // Ignore symbolic properties and count only the "own properties" (not inherited) of the
 // object.
-
+const friend = {
+  name: 'Dominique',
+  age: 30,
+  phone: '555-555-5555',
+};
 const numProps = (obj) => {
   // returns number of 'own properties' object has
-  // question of object inheritence!
-}
+  // not question of object inheritence!
+  let objectKeys = Object.keys(obj);
+  console.log(objectKeys.length);
+};
+
+numProps({});
 
 // Filter between
 // Write a function filterBetween(array, min, max) that takes an array of numbers,
 // a min value, and a max value. It returns a new array containing only the elements that
 // are greater than or equal to min and less than or equal to max.
+const filterBetween = (array, min, max) => {
+  // returns new array containing min <= elements <= max
+}
