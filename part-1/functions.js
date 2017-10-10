@@ -4,7 +4,7 @@
 const weekday = (year, month, day) => {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const d = new Date(year, month, day);
-  console.log(`The Day of the week you are looking for is ${daysOfWeek[d.getDay()]}`);
+  // console.log(`The Day of the week you are looking for is ${daysOfWeek[d.getDay()]}`);
   return daysOfWeek[d.getDay()];
 };
 
@@ -26,6 +26,11 @@ const snippet = (string, maxlength) => {
 // Write a function numProps(obj) that returns the number of properties an object has.
 // Ignore symbolic properties and count only the "own properties" (not inherited) of the
 // object.
+
+const numProps = (obj) => {
+  // returns number of 'own properties' object has
+  // question of object inheritence!
+}
 
 // Filter between
 // Write a function filterBetween(array, min, max) that takes an array of numbers,
