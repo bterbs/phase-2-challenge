@@ -8,12 +8,21 @@ const weekday = (year, month, day) => {
   return daysOfWeek[d.getDay()];
 };
 
-weekday(2017, 9, 10);
+// weekday(2017, 9, 10);
 
 // Get a snippet from text
 // Write a function snippet(string, maxlength) that shortens the string given to the maxlength
 // and adds the ellipsis character ("…") to the end of string, and then returns the shortened
 // string. If the string is shorter than the maxlength, just return the string unmodified.
+
+const snippet = (string, maxlength) => {
+  if (string.length < maxlength) { console.log(string); }
+    console.log(string.slice(0, maxlength) + '...');
+    return string.slice(0, maxlength) + '...';
+
+};
+
+snippet("For the following exercises,", 10);
 
 // Number of properties
 // Write a function numProps(obj) that returns the number of properties an object has.
