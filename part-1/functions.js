@@ -38,3 +38,10 @@ const filterBetween = (arr, min, max) => {
   console.log(result);
   return result;
 };
+
+module.exports = {
+  weekday,
+  snippet,
+  numProps,
+  filterBetween,
+};
