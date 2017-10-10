@@ -45,13 +45,11 @@ numProps({});
 // a min value, and a max value. It returns a new array containing only the elements that
 // are greater than or equal to min and less than or equal to max.
 const filterBetween = (arr, min, max) => {
-  // returns new array containing min <= elements <= max
-  let result = arr.filter((element) => {
-    return min <= element <= max
-  });
+  let result = arr.filter((num) => num >= min && num <= max);
   console.log(result);
+  return result;
 };
 
 let arr = [5, 10, 15, 20, 25, 30, 35]
 
-filterBetween(arr, 15, 34)
+filterBetween(arr, 22, 100);
