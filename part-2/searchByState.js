@@ -3,16 +3,16 @@ const fs = require('fs');
 const clientsFile = './clients.json';
 const readFromFile = () => JSON.parse(fs.readFileSync(clientsFile), 'utf 8');
 
-const name = process.argv.slice(2).join();
+const stateName = process.argv.slice(2).join();
 
-const searchByName = () => {
+const searchByState = () => {
   const clients = readFromFile(clientsFile);
-  const regexp = new RegExp('^' + name, "gi");
+  let regexp = new RegExp(stateName, "gi");
   const results = clients.filter((client) => {
-    return regexp.test(client.rep_name)
+    return regexp.test(client.state)
   });
-  console.log(`Finding clients with name "${name}"...`)
+  console.log(`Finding clients in State "${stateName}"...`)
   console.log(results);
 };
 
-searchByName(name)
+searchByState(stateName);
