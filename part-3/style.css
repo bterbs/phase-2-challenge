@@ -9,5 +9,20 @@ background:#d33258;
 #wrap {
 width:750px;
 margin:0 auto;
-background:#edb6c3;
+background:#d33258;
+}
+
+#header {
+background:#ddd;
+}
+
+#main {
+float:right;
+width:600px;
+background:#fcbdcc;
+}
+#sidebar {
+float: left;
+width: 150px;
+background:#ff7c9b;
 }
