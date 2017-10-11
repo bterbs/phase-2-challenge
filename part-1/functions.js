@@ -32,7 +32,7 @@ const numProps = (obj) => {
     const objectKeys = Object.keys(obj);
     return objectKeys.length;
   } else {
-    throw new Error('no strings please');
+    throw new Error('Unexpected input: no strings please');
   }
 };
 
@@ -42,8 +42,14 @@ const numProps = (obj) => {
 // are greater than or equal to min and less than or equal to max.
 const filterBetween = (arr, min, max) => {
   const result = arr.filter((num) => num >= min && num <= max);
-  return result;
+  if (result.length == 0) {
+    throw new Error('Results empty: check arr being passed');
+  } else {
+    return result;
+  }
 };
+// let arr = ['dog', 'cat', 'bird'];
+// filterBetween(arr, 0, 1000);
 
 module.exports = {
   weekday,
