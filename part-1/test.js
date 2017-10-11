@@ -44,12 +44,15 @@ describe('numProps()', () => {
 });
 
 describe('filterBetween()', () => {
-  it('returns correct day with valid input', () => {
-    const date = new Date(2017, 9, 10);
-    expect(weekday(date)).to.equal('Tue');
+  it('returns expected number of elements', () => {
+    let arr = [5, 10, 15, 20, 25, 30, 35];
+    let testResults = filterBetween(arr, 15, 34);
+    expect(testResults.length).to.equal(4);
   });
-  it('returns undefined with invalid/unexpected input', () => {
-    const date = 'today';
-    expect(weekday(date)).to.equal(undefined);
+  it('throws error if arr passed includes strings', () => {
+    let arr = ['dog', 'cat', 'bird']
+    expect(function(){
+      filterBetween(arr, 0, 100);
+    }).to.throw(Error);
   });
 });
