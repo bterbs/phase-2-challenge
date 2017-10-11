@@ -11,8 +11,9 @@ const readFromFile = clientsFile => JSON.parse(fs.readFileSync(clientsFile), 'ut
 
 const searchByName = (name) => {
   const clients = readFromFile(clientsFile);
+  var regexp = new RegExp('^' + name, "gi");
   const results = clients.filter((client) => {
-    return /^ad/i.test(client.rep_name);
+    return regexp.test(client.rep_name);
   })
   console.log(results);
 };
