@@ -23,6 +23,18 @@ h2, h1 {
   padding-left: 10px;
 }
 
+h3 {
+  display: inline-block;
+}
+
+button {
+  float: right;
+}
+
+#cart-btn {
+  margin-top: 23px;
+}
+
 #main {
 float:right;
 width:600px;
