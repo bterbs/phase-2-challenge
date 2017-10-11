@@ -1,5 +1,5 @@
 # Dev linter rules file
-.eslintrc
+.eslintrc.json
 
 # Logs
 logs
