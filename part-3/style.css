@@ -13,7 +13,14 @@ background:#d33258;
 }
 
 #header {
+
+padding: 3px;
 background:#ddd;
+}
+
+h2, h1 {
+  color: #a30026;
+  padding-left: 10px;
 }
 
 #main {
@@ -25,4 +32,16 @@ background:#fcbdcc;
 float: left;
 width: 150px;
 background:#ff7c9b;
+}
+
+#sidebar-header {
+  color: #f9e5ea;
+  text-align: center;
+  background: #db2e55;
+  padding: 1px 0px 1px 0px;
+}
+
+#footer {
+  clear: both;
+  background:#ddd;
 }
