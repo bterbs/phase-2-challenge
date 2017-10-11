@@ -1,6 +1,7 @@
 const fs = require('fs');
+
 const clientsFile = './clients.json';
-const readFromFile = clientsFile => JSON.parse(fs.readFileSync(clientsFile), 'utf 8');
+const readFromFile = () => JSON.parse(fs.readFileSync(clientsFile), 'utf 8');
 
 const stateName = process.argv.slice(2).join();
 
@@ -12,6 +13,6 @@ const searchByState = () => {
   });
   console.log(`Finding clients in State "${stateName}"...`)
   console.log(results);
-
 };
+
 searchByState(stateName);
