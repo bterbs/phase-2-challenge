@@ -1,13 +1,14 @@
 // Show a weekday
 // Write a function weekday(date) to find the weekday for a given Date object,
 // returing either 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', or 'Sun'.
-const weekday = (year, month, day) => {
+const weekday = (date) => {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const d = new Date(year, month, day);
+  const d = new Date(date);
   return daysOfWeek[d.getDay()];
 };
 
-// weekday(2017, 9, 10);
+// var date = new Date(2017, 9, 10)
+// weekday(date);
 
 // Get a snippet from text
 // Write a function snippet(string, maxlength) that shortens the string given to the maxlength
@@ -15,8 +16,11 @@ const weekday = (year, month, day) => {
 // string. If the string is shorter than the maxlength, just return the string unmodified.
 
 const snippet = (string, maxlength) => {
-  if (string.length < maxlength) { string }
+  if (string.length < maxlength) {
+    return string;
+  } else {
   return `${string.slice(0, maxlength)}...`;
+  }
 };
 
 // Number of properties
@@ -24,9 +28,12 @@ const snippet = (string, maxlength) => {
 // Ignore symbolic properties and count only the "own properties" (not inherited) of the
 // object.
 const numProps = (obj) => {
-  const objectKeys = Object.keys(obj);
-  console.log(objectKeys.length);
-  return objectKeys.length;
+  if (typeof obj != 'string') {
+    const objectKeys = Object.keys(obj);
+    return objectKeys.length;
+  } else {
+    throw new Error('no strings please');
+  }
 };
 
 // Filter between
@@ -35,7 +42,6 @@ const numProps = (obj) => {
 // are greater than or equal to min and less than or equal to max.
 const filterBetween = (arr, min, max) => {
   const result = arr.filter((num) => num >= min && num <= max);
-  console.log(result);
   return result;
 };
 
