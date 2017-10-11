@@ -4,7 +4,7 @@ const readFromFile = clientsFile => JSON.parse(fs.readFileSync(clientsFile), 'ut
 
 const stateName = process.argv.slice(2).join();
 
-const searchByState = (stateName) => {
+const searchByState = () => {
   const clients = readFromFile(clientsFile);
   let regexp = new RegExp(stateName, "gi");
   const results = clients.filter((client) => {
@@ -12,6 +12,6 @@ const searchByState = (stateName) => {
   });
   console.log(`Finding clients in State "${stateName}"...`)
   console.log(results);
-};
 
+};
 searchByState(stateName);
