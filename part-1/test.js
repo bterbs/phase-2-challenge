@@ -36,7 +36,7 @@ describe('numProps()', () => {
     };
     expect(numProps(pet)).to.equal(4);
   });
-  it('returns error with invalid/unexpected input', () => {
+  it('returns error with invalid/unexpected input, like strings', () => {
     expect(function(){
       numProps('pizza');
     }).to.throw(Error);
