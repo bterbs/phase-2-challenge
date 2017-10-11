@@ -28,9 +28,12 @@ const snippet = (string, maxlength) => {
 // Ignore symbolic properties and count only the "own properties" (not inherited) of the
 // object.
 const numProps = (obj) => {
-  const objectKeys = Object.keys(obj);
-  console.log(objectKeys.length);
-  return objectKeys.length;
+  if (typeof obj != 'string') {
+    const objectKeys = Object.keys(obj);
+    return objectKeys.length;
+  } else {
+    throw new Error('no strings please');
+  }
 };
 
 // Filter between
@@ -39,7 +42,6 @@ const numProps = (obj) => {
 // are greater than or equal to min and less than or equal to max.
 const filterBetween = (arr, min, max) => {
   const result = arr.filter((num) => num >= min && num <= max);
-  console.log(result);
   return result;
 };
 

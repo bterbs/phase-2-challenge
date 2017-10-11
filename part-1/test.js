@@ -23,5 +23,33 @@ describe('snippet()', () => {
     expect(function(){
       snippet(3, 0);
     }).to.throw('string.slice is not a function');
-  }); 
+  });
+});
+
+describe('numProps()', () => {
+  it('returns correct number of properties with valid input', () => {
+    let pet = {
+      name: 'Kitty',
+      age: 1,
+      species: 'cat',
+      phone: '555-555-5555'
+    };
+    expect(numProps(pet)).to.equal(4);
+  });
+  it('returns error with invalid/unexpected input', () => {
+    expect(function(){
+      numProps('pizza');
+    }).to.throw(Error);
+  });
+});
+
+describe('filterBetween()', () => {
+  it('returns correct day with valid input', () => {
+    const date = new Date(2017, 9, 10);
+    expect(weekday(date)).to.equal('Tue');
+  });
+  it('returns undefined with invalid/unexpected input', () => {
+    const date = 'today';
+    expect(weekday(date)).to.equal(undefined);
+  });
 });
