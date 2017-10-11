@@ -15,6 +15,7 @@ const searchByName = (name) => {
   const results = clients.filter((client) => {
     return regexp.test(client.rep_name)
   });
+  console.log(`Finding clients with name "${name}"...`)
   console.log(results);
 };
 
