@@ -1,0 +1,60 @@
+body,
+html {
+margin:0;
+padding:0;
+color:#000;
+background:#d33258;
+}
+
+#wrap {
+width:750px;
+margin:0 auto;
+background:#d33258;
+}
+
+#header {
+
+padding: 3px;
+background:#ddd;
+}
+
+h2, h1 {
+  color: #a30026;
+  padding-left: 10px;
+}
+
+h3 {
+  display: inline-block;
+}
+
+button {
+  float: right;
+}
+
+#cart-btn {
+  margin-top: 23px;
+}
+
+#main {
+float:right;
+width:600px;
+background:#fcbdcc;
+}
+#sidebar {
+float: left;
+width: 150px;
+background:#ff7c9b;
+height: 350px;
+}
+
+#sidebar-header {
+  color: #f9e5ea;
+  text-align: center;
+  background: #db2e55;
+  padding: 1px 0px 1px 0px;
+}
+
+#footer {
+  clear: both;
+  background:#ddd;
+}

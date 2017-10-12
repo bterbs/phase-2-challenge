@@ -12,7 +12,10 @@ const searchByName = () => {
     return regexp.test(client.rep_name)
   });
   console.log(`Finding clients with name "${name}"...`)
-  console.log(results);
+
+  Object.keys(results).forEach((prop) => {
+    console.log(`id: ${results[prop].id}, rep_name: ${results[prop].rep_name}`);
+  });
 };
 
-searchByName(name)
+searchByName(name);

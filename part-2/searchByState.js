@@ -12,7 +12,15 @@ const searchByState = () => {
     return regexp.test(client.state)
   });
   console.log(`Finding clients in State "${stateName}"...`)
-  console.log(results);
+
+  Object.keys(results).forEach((property) => {
+    console.log(`
+      id: ${results[property].id},
+      rep_name: ${results[property].rep_name},
+      company: ${results[property].company},
+      city: ${results[property].city},
+      state: ${results[property].state}`);
+  });
 };
 
 searchByState(stateName);
