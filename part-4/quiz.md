@@ -6,7 +6,7 @@ When you run a command in the terminal, where does BASH look for that command?
 In the PATH environment variable - it specifies the directories in which executable programs are located.
 
 On a UNIX computer, how do you stop a running process?
-Cntrl + C or use the kill command with process id (ex 'kill 1849').
+control-c or use the kill command with process id (ex 'kill 1849').
 
 What packages do you have installed via homebrew?
 Running 'brew list' in the terminal reveals what packages are currently installed via homebrew. Mine are 'coreutils, hub, node,	postgresql,
@@ -66,7 +66,7 @@ What files or folders do you want all git repositories to ignore?
 Files not required by your project to functions, also operating system files, application files, etc.
 
 What is the main difference between == and === in JavaScript?
-Both check the equality of two values, but === also checks the type of each value and compares if those are equal as well. 
+Both check the equality of two values, but === also checks the type of each value and compares if those are equal as well.
 
 __________________________________________
 Requirements

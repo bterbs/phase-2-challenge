@@ -7,8 +7,8 @@ const weekday = (date) => {
   return daysOfWeek[d.getDay()];
 };
 
-// var date = new Date(2017, 9, 10)
-// weekday(date);
+const date = new Date(2017, 9, 12);
+console.log(weekday(date));
 
 // Get a snippet from text
 // Write a function snippet(string, maxlength) that shortens the string given to the maxlength
@@ -23,12 +23,14 @@ const snippet = (string, maxlength) => {
   }
 };
 
+console.log(snippet('For the following exercises,', 10));
+
 // Number of properties
 // Write a function numProps(obj) that returns the number of properties an object has.
 // Ignore symbolic properties and count only the "own properties" (not inherited) of the
 // object.
 const numProps = (obj) => {
-  if (typeof obj != 'string') {
+  if (typeof obj !== 'string') {
     const objectKeys = Object.keys(obj);
     return objectKeys.length;
   } else {
@@ -36,20 +38,23 @@ const numProps = (obj) => {
   }
 };
 
+console.log(numProps({}));
+
 // Filter between
 // Write a function filterBetween(array, min, max) that takes an array of numbers,
 // a min value, and a max value. It returns a new array containing only the elements that
 // are greater than or equal to min and less than or equal to max.
 const filterBetween = (arr, min, max) => {
   const result = arr.filter((num) => num >= min && num <= max);
-  if (result.length == 0) {
+  if (result.length === 0) {
     throw new Error('Results empty: check arr being passed');
   } else {
     return result;
   }
 };
-// let arr = ['dog', 'cat', 'bird'];
-// filterBetween(arr, 0, 1000);
+
+const arr = [5, 10, 15, 20, 25, 30, 35];
+console.log(filterBetween(arr, 0, 16));
 
 module.exports = {
   weekday,
