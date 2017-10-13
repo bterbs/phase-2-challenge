@@ -7,7 +7,7 @@ const stateName = process.argv.slice(2).join();
 
 const searchByState = () => {
   const clients = readFromFile(clientsFile);
-  let regexp = new RegExp(stateName, "gi");
+  let regexp = new RegExp('^' + stateName + '$', "gi");
   const results = clients.filter((client) => {
     return regexp.test(client.state)
   });
