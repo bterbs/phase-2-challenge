@@ -3,12 +3,14 @@
 // returing either 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', or 'Sun'.
 const weekday = (date) => {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const d = new Date(date);
-  return daysOfWeek[d.getDay()];
+  if (Object.prototype.toString.call(date) === "[object Date]") {
+    return daysOfWeek[date.getDay()];
+  };
+  throw new Error('You entered an invalid date! Try again.');
 };
 
-const date = new Date(2017, 9, 12);
-console.log(weekday(date));
+// console.log(weekday('today'));
+console.log(weekday(new Date(2017, 5, 19)));
 
 // Get a snippet from text
 // Write a function snippet(string, maxlength) that shortens the string given to the maxlength
