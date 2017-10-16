@@ -16,16 +16,18 @@ background:white;
 #header {
 background:white;
 border-style: solid;
- padding-left: 10px;
+padding-left: 10px;
+height: 30px;
 }
 
 h2, h1 {
   padding-left: 10px;
 }
 
-h3 {
+p {
   display: inline-block;
-
+  margin: -.1px;
+  padding-top: 6px;
 }
 
 button {
@@ -34,7 +36,7 @@ button {
 }
 
 #cart-btn {
-  margin-top: 23px;
+  margin-top: 6px;
 }
 .container {
   display: flex;
@@ -46,7 +48,6 @@ width:700px;
 }
 
 #sidebar {
-text-align: left;
 width: 100px;
 border-style: solid;
 height: 400px;
@@ -59,8 +60,16 @@ height: 400px;
   border-bottom-style: solid
 }
 
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+
 #footer {
   clear: both;
   background:#ddd;
   border-style: solid;
+  height: 20px;
 }
