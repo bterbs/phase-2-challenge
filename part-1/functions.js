@@ -3,6 +3,8 @@
 // returing either 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', or 'Sun'.
 const weekday = (date) => {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+// check to see if date argument object's class is an instance of Date, then call .getDay
+// and return daysOfWeek day at that index.
   if (Object.prototype.toString.call(date) === "[object Date]") {
     return daysOfWeek[date.getDay()];
   };
