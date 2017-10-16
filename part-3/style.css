@@ -47,10 +47,19 @@ button {
 width:700px;
 }
 
+th {
+  text-align: left;
+  padding: 10px 0px 10px 0px;
+}
+
+td {
+  padding-bottom: 10px;
+}
+
 #sidebar {
 width: 100px;
 border-style: solid;
-height: 400px;
+height: auto;
 }
 
 #sidebar-header {
