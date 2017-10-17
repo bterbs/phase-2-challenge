@@ -34,12 +34,11 @@ console.log(snippet('For the following exercises,', 10));
 // Ignore symbolic properties and count only the "own properties" (not inherited) of the
 // object.
 const numProps = (obj) => {
-  if (typeof obj !== 'string') {
+  if (typeof obj === 'object') {
     const objectKeys = Object.keys(obj);
     return objectKeys.length;
-  } else {
-    throw new Error('Unexpected input: no strings please');
   }
+  throw new Error('numProps must be passed an object');
 };
 
 console.log(numProps({}));
@@ -72,7 +71,7 @@ const filterBetween = (arr, min, max) => {
 };
 
 const arr = [5, 10, 15, 20, 25, 30, 35];
-console.log(filterBetween(arr, 0, 21));
+console.log(filterBetween(arr, 0, 16));
 
 module.exports = {
   weekday,
