@@ -49,9 +49,21 @@ console.log(numProps({}));
 // a min value, and a max value. It returns a new array containing only the elements that
 // are greater than or equal to min and less than or equal to max.
 const filterBetween = (arr, min, max) => {
+// first will check input to make sure arguments only contain numbers.
+  arr.forEach((element) => {
+    if (typeof (element) !== 'number') {
+      throw new Error('whoops! check that array passed to filterBetween only contains numbers');
+    } else if (typeof (min) !== 'number') {
+      throw new Error('whoops! check that \'min\' passed to filterBetween only contains numbers');
+    } else if (typeof (max) !== 'number') {
+      throw new Error('whoops! check that \'max\' passed to filterBetween only contains numbers');
+    }
+  });
+
   const result = arr.filter((num) => num >= min && num <= max);
+
   if (result.length === 0) {
-    throw new Error('Results empty: check arr being passed');
+    throw new Error('Results empty: check array being passed');
   } else {
     return result;
   }
