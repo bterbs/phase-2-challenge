@@ -36,7 +36,7 @@ describe('snippet()', () => {
 
 describe('numProps()', () => {
   it('returns correct number of properties with valid input', () => {
-    let pet = {
+    const pet = {
       name: 'Kitty',
       age: 1,
       species: 'cat',
@@ -53,24 +53,24 @@ describe('numProps()', () => {
 
 describe('filterBetween()', () => {
   it('returns expected number of elements', () => {
-    let arr = [5, 10, 15, 20, 25, 30, 35];
-    let testResults = filterBetween(arr, 15, 34);
+    const arr = [5, 10, 15, 20, 25, 30, 35];
+    const testResults = filterBetween(arr, 15, 34);
     expect(testResults.length).to.equal(4);
   });
   it('throws error if non-number passed as min', () => {
-    let arr = [1, 2, 101]
+    const arr = [1, 2, 101]
     expect(function(){
       filterBetween(arr, 'cat', 100);
     }).to.throw(Error);
   });
   it('throws error if non-number passed as max', () => {
-    let arr = [1, 2, 101]
+    const arr = [1, 2, 101]
     expect(function(){
       filterBetween(arr, 0, 'cat');
     }).to.throw(Error);
   });
   it('throws error if non-number passed in array', () => {
-    let arr = [1, 2, 'cat']
+    const arr = [1, 2, 'cat']
     expect(function(){
       filterBetween(arr, 0, 100);
     }).to.throw(Error);
