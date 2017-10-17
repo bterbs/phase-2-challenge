@@ -52,10 +52,10 @@ describe('filterBetween()', () => {
     let testResults = filterBetween(arr, 15, 34);
     expect(testResults.length).to.equal(4);
   });
-  it('throws error if arr passed includes strings', () => {
-    let arr = ['dog', 'cat', 'bird']
+  it('throws error with invalid input', () => {
+    let arr = [1, 2, 101]
     expect(function(){
-      filterBetween(arr, 0, 100);
+      filterBetween(arr, 0, 'cat');
     }).to.throw(Error);
   });
 });
