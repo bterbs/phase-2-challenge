@@ -3,16 +3,16 @@
 // returing either 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', or 'Sun'.
 const weekday = (date) => {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-// check to see if date argument object's class is an instance of Date, then call .getDay
-// and return daysOfWeek day at that index.
-  if (Object.prototype.toString.call(date) === "[object Date]") {
+  // check to see if date argument object's class is an instance of Date, then call .getDay
+  // and return daysOfWeek day at that index.
+  if (Object.prototype.toString.call(date) === '[object Date]') {
     return daysOfWeek[date.getDay()];
-  };
+  }
   throw new Error('You entered an invalid date! Try again.');
 };
 
 // console.log(weekday('today'));
-console.log(weekday(new Date(2017, 5, 19)));
+// console.log(weekday(new Date(2017, 5, 19)));
 
 // Get a snippet from text
 // Write a function snippet(string, maxlength) that shortens the string given to the maxlength
@@ -33,7 +33,7 @@ const snippet = (string, maxlength) => {
   return `${string.slice(0, maxlength)}...`;
 };
 
-console.log(snippet('For the following exercises,', 10));
+// console.log(snippet('For the following exercises,', 10));
 
 // Number of properties
 // Write a function numProps(obj) that returns the number of properties an object has.
@@ -47,7 +47,7 @@ const numProps = (obj) => {
   throw new Error('numProps must be passed an object to return number of properties');
 };
 
-console.log(numProps({}));
+// console.log(numProps({}));
 
 // Filter between
 // Write a function filterBetween(array, min, max) that takes an array of numbers,
@@ -78,8 +78,8 @@ const filterBetween = (arr, min, max) => {
   }
 };
 
-const arr = [5, 10, 15, 20, 25, 30, 35];
-console.log(filterBetween(arr, 0, 16));
+// const arr = [5, 10, 15, 20, 25, 30, 35];
+// console.log(filterBetween(arr, 0, 16));
 
 module.exports = {
   weekday,
