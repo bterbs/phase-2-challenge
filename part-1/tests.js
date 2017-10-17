@@ -22,10 +22,15 @@ describe('snippet()', () => {
   it('returns expected snippet with valid input', () => {
     expect(snippet('Hello, world!', 20)).to.equal('Hello, world!');
   });
-  it('throws an error with invalid/unexpected input', () => {
+  it('throws an error if not passed string to shorten', () => {
     expect(function(){
       snippet(3, 0);
     }).to.throw('snippet function must be passed string');
+  });
+  it('throws an error if not passed a number for maxlength', () => {
+    expect(function(){
+      snippet('Hello, world!', 'dog');
+    }).to.throw('snippet function must be passed number for maxlength');
   });
 });
 
