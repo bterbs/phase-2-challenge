@@ -44,7 +44,7 @@ const numProps = (obj) => {
     const objectKeys = Object.keys(obj);
     return objectKeys.length;
   }
-  throw new Error('numProps must be passed an object');
+  throw new Error('numProps must be passed an object to return number of properties');
 };
 
 console.log(numProps({}));

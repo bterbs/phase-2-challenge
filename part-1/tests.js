@@ -57,10 +57,22 @@ describe('filterBetween()', () => {
     let testResults = filterBetween(arr, 15, 34);
     expect(testResults.length).to.equal(4);
   });
-  it('throws error with invalid input', () => {
+  it('throws error if non-number passed as min', () => {
+    let arr = [1, 2, 101]
+    expect(function(){
+      filterBetween(arr, 'cat', 100);
+    }).to.throw(Error);
+  });
+  it('throws error if non-number passed as max', () => {
     let arr = [1, 2, 101]
     expect(function(){
       filterBetween(arr, 0, 'cat');
+    }).to.throw(Error);
+  });
+  it('throws error if non-number passed in array', () => {
+    let arr = [1, 2, 'cat']
+    expect(function(){
+      filterBetween(arr, 0, 100);
     }).to.throw(Error);
   });
 });
