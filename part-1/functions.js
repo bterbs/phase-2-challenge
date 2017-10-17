@@ -20,11 +20,17 @@ console.log(weekday(new Date(2017, 5, 19)));
 // string. If the string is shorter than the maxlength, just return the string unmodified.
 
 const snippet = (string, maxlength) => {
+  // check that string argument is string and maxlength argument is number.
+  if (typeof string !== 'string') {
+    throw new Error('snippet function must be passed string');
+  }
+  if (typeof maxlength !== 'number') {
+    throw new Error('snippet function must be passed number for maxlength');
+  }
   if (string.length < maxlength) {
     return string;
-  } else {
-  return `${string.slice(0, maxlength)}...`;
   }
+  return `${string.slice(0, maxlength)}...`;
 };
 
 console.log(snippet('For the following exercises,', 10));
