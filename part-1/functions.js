@@ -53,12 +53,14 @@ const filterBetween = (arr, min, max) => {
   arr.forEach((element) => {
     if (typeof (element) !== 'number') {
       throw new Error('whoops! check that array passed to filterBetween only contains numbers');
-    } else if (typeof (min) !== 'number') {
-      throw new Error('whoops! check that \'min\' passed to filterBetween only contains numbers');
-    } else if (typeof (max) !== 'number') {
-      throw new Error('whoops! check that \'max\' passed to filterBetween only contains numbers');
     }
   });
+  if (typeof (min) !== 'number') {
+    throw new Error('whoops! check that \'min\' passed to filterBetween only contains numbers');
+  }
+  if (typeof (max) !== 'number') {
+    throw new Error('whoops! check that \'max\' passed to filterBetween only contains numbers');
+  }
 
   const result = arr.filter((num) => num >= min && num <= max);
 
@@ -70,7 +72,7 @@ const filterBetween = (arr, min, max) => {
 };
 
 const arr = [5, 10, 15, 20, 25, 30, 35];
-console.log(filterBetween(arr, 0, 16));
+console.log(filterBetween(arr, 0, 21));
 
 module.exports = {
   weekday,
