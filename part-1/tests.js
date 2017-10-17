@@ -25,7 +25,7 @@ describe('snippet()', () => {
   it('throws an error with invalid/unexpected input', () => {
     expect(function(){
       snippet(3, 0);
-    }).to.throw('string.slice is not a function');
+    }).to.throw('snippet function must be passed string');
   });
 });
 
